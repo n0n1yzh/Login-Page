@@ -1,4 +1,4 @@
-//
+ //
 //  ContentView.swift
 //  Login Page
 //
@@ -9,8 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        // Zstack 做背景色
+        ZStack{
+            // 颜色渐变效果 数组中三个颜色 依次渐变 道理很简单
+            LinearGradient(gradient: .init(colors: [Color("Color"), Color("Color1"), Color("Color2")]), startPoint: .top, endPoint: .bottom).edgesIgnoringSafeArea(.all)
+            // 主视图
+            Home()
+        }
     }
 }
 
@@ -19,3 +24,6 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+ 
+ 
+
